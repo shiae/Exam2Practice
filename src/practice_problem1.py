@@ -39,9 +39,9 @@ def main():
     # UN-comment tests as you work the problems.
     ####################################################################
 
-    run_test_init()
-#     run_test_append_string()
-#     run_test_double()
+    # run_test_init()
+    # run_test_append_string()
+    run_test_double()
 #     run_test_shrink()
 #     run_test_double_then_shrink()
 #     run_test_reset()
@@ -141,7 +141,7 @@ class Box(object):
           :type additional_contents: str
         """
         # --------------------------------------------------------------
-        # TODO: 3. Implement and test this function.
+        # DONE: 3. Implement and test this function.
         #     See the testing code (below) for more examples.
         # --------------------------------------------------------------
         # --------------------------------------------------------------
@@ -162,6 +162,14 @@ class Box(object):
         #       Read_this_ONLY_when_asked_Part_2.txt
         #    and continue working on the problem.
         # --------------------------------------------------------------
+
+        extra = ''
+        for k in range(len(additional_contents)):
+            if len(self.contents) == self.volume:
+                extra += str(additional_contents[k])
+            else:
+                self.contents += additional_contents[k]
+        return extra
 
     def double(self):
         """
