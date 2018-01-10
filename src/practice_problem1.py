@@ -41,8 +41,8 @@ def main():
 
     # run_test_init()
     # run_test_append_string()
-    run_test_double()
-#     run_test_shrink()
+    # run_test_double()
+    run_test_shrink()
 #     run_test_double_then_shrink()
 #     run_test_reset()
 #     run_test_steal()
@@ -267,6 +267,13 @@ class Box(object):
         # IMPORTANT: Write a solution to this problem in pseudo-code,
         # and THEN translate the pseudo-code to a solution.
         # --------------------------------------------------------------
+
+        self.volume = new_volume
+        extra = ''
+        for k in range(len(self.contents)):
+            if k + 1 == self.volume:
+                self.contents += self.contents[k]
+        return extra
 
     def double_then_shrink(self, new_volume):
         """
