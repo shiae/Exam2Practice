@@ -33,8 +33,8 @@ import rosegraphics as rg
 def main():
     """ Calls the   TEST   functions in this module. """
     # run_test_practice_problem3a()
-    run_test_practice_problem3b()
-    # run_test_practice_problem3c()
+    # run_test_practice_problem3b()
+    run_test_practice_problem3c()
     # run_test_practice_problem3d()
     # run_test_practice_problem3e()
 
@@ -153,7 +153,7 @@ def practice_problem3a(circles):
       then this function returns:
         5 x 2 x 7 x 10 x 2, which is 1400.
     Type hints:
-      :type sequence: [rg.Circle]
+      :type : [rg.Circle]
     """
     ####################################################################
     # DONE: 2. Implement and test this function.
@@ -366,13 +366,22 @@ def practice_problem3c(sequence):
       :type: sequence: list    or tuple or string
     """
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   8 minutes.
     ####################################################################
+
+    i = []
+
+    for k in range(len(sequence)):
+        if sequence[k] == 0:
+            i += [k]
+
+    return i
+
 
 
 def run_test_practice_problem3d():
