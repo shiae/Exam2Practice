@@ -31,7 +31,7 @@ import simple_testing as st
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_practice_problem2a()
-    run_test_practice_problem2b()
+    # run_test_practice_problem2b()
 
 
 # ----------------------------------------------------------------------
@@ -65,6 +65,7 @@ def run_test_practice_problem2a():
     actual = practice_problem2a(sequence, delta)
     print('Expected', expected)
     print('Actual', actual)
+    print()
 
     print('Test 2')
     sequence = [15, -3, 5, 14]
@@ -73,22 +74,25 @@ def run_test_practice_problem2a():
     actual = practice_problem2a(sequence, delta)
     print('Expected', expected)
     print('Actual', actual)
+    print()
 
-    print('Test 1')
+    print('Test 3')
     sequence = [50]
     delta = 5
     expected = [55]
     actual = practice_problem2a(sequence, delta)
     print('Expected', expected)
     print('Actual', actual)
+    print()
 
-    print('Test 1')
+    print('Test 4')
     sequence = [1, 2, 3, 4, 5, 100]
     delta = 0
     expected = [1, 2, 3, 4, 5, 100]
     actual = practice_problem2a(sequence, delta)
     print('Expected', expected)
     print('Actual', actual)
+    print()
 
 
 def practice_problem2a(sequence, delta):
@@ -110,13 +114,17 @@ def practice_problem2a(sequence, delta):
       :type delta:    int
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   5 minutes.
     ####################################################################
+
+    for k in range(len(sequence)):
+        sequence[k] += delta
+    return sequence
 
 
 def run_test_practice_problem2b():
