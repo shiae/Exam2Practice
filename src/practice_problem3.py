@@ -32,8 +32,8 @@ import rosegraphics as rg
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_practice_problem3a()
-    # run_test_practice_problem3b()
+    # run_test_practice_problem3a()
+    run_test_practice_problem3b()
     # run_test_practice_problem3c()
     # run_test_practice_problem3d()
     # run_test_practice_problem3e()
@@ -273,7 +273,7 @@ def practice_problem3b(sequence):
       :type: sequence: list    or tuple or string
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     # IMPLEMENTATION REQUIREMENT:  You are NOT allowed to use the
@@ -285,6 +285,11 @@ def practice_problem3b(sequence):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   8 minutes.
     ####################################################################
+
+    for k in range(len(sequence) - 1):
+        if sequence[k] == sequence[-1]:
+            return True
+    return False
 
 
 def run_test_practice_problem3c():
