@@ -35,8 +35,8 @@ def main():
     # run_test_practice_problem3a()
     # run_test_practice_problem3b()
     # run_test_practice_problem3c()
-    run_test_practice_problem3d()
-    # run_test_practice_problem3e()
+    # run_test_practice_problem3d()
+    run_test_practice_problem3e()
 
 
 def is_prime(n):
@@ -548,7 +548,7 @@ def practice_problem3e(sequence):
       :type sequence: list(float)    or tuple(float)
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -556,6 +556,12 @@ def practice_problem3e(sequence):
     #    TIME ESTIMATE:   8 minutes.
     ####################################################################
 
+    add = 0
+
+    for k in range(0, len(sequence), 2):
+        add += sequence[k]
+
+    return add
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
